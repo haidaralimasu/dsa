@@ -1,12 +1,15 @@
-def fun(x):
-
-    if(x > 0):
-        x -= 1
-        fun(x)
-        print(x, end=" ")
-        x -= 1
-        fun(x)
+from itertools import count
 
 
-a = 4
-fun(a)
+def counter(n):
+    if n > 0:
+        print(n)
+        counter(n-1)
+
+
+def main():
+    n = int(input())
+    counter(n)
+
+
+main()
